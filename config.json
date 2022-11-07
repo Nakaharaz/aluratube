@@ -1,0 +1,26 @@
+{
+    "name": "Enzo Nakahara",
+    "job": "Fullstack developer | Freelancer",
+    "github": "nakaharaz",
+    "playlists": {
+        "jogos": [
+            {
+                "title": "Video 01",
+                "url": "url",
+                "thumb": "thumbnail do video"
+            },
+            {
+                "title": "Video 02",
+                "url": "url",
+                "thumb": "thumbnail do video"
+            }
+        ],
+        "front-end": [
+            {
+                "title": "Video 03",
+                "url": "url",
+                "thumb": "thumbnail do video"
+            }
+        ]
+    }
+}
