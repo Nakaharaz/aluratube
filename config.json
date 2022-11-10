@@ -1,26 +1,33 @@
 {
+    "mainBanner": "XJXWbfSo2f0",
     "name": "Enzo Nakahara",
     "job": "Fullstack developer | Freelancer",
+    "bg": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1120&q=80",
     "github": "nakaharaz",
     "playlists": {
         "jogos": [
             {
                 "title": "Video 01",
-                "url": "url",
+                "url": "url1",
                 "thumb": "thumbnail do video"
             },
             {
                 "title": "Video 02",
-                "url": "url",
+                "url": "url2",
                 "thumb": "thumbnail do video"
             }
         ],
         "front-end": [
             {
                 "title": "Video 03",
-                "url": "url",
+                "url": "url3",
                 "thumb": "thumbnail do video"
             }
         ]
-    }
+    },
+    "favorites": [
+        {
+            "channel": "Kennzy"
+        }
+    ]
 }

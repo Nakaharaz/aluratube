@@ -1,10 +1,13 @@
-import config from '../config.json'
 import styled from 'styled-components'
+import { useState } from 'react'
+
+import config from '../config.json'
 import { CSSReset } from '../src/components/CSSReset';
 import Menu from '../src/components/Menu';
 import { StyledTimeline } from '../src/components/TimeLine';
 
 function HomePage() {
+    const [filterValue, setFilterValue] = useState('');
 
     return (
         <>
@@ -14,9 +17,9 @@ function HomePage() {
                 flexDirection: "column",
                 flex: 1,
             }}>
-                <Menu />
-                <Header />
-                <TimeLine playlists={config.playlists} />
+                <Menu filterValue={filterValue} setFilterValue={setFilterValue} />
+                <Header imageSrc={config.mainBanner} />
+                <TimeLine searchValue={filterValue} playlists={config.playlists} />
             </div>
         </>
     );
@@ -25,27 +28,37 @@ function HomePage() {
 export default HomePage
 
 const StyledHeader = styled.div`
-    img {
+    .avatar {
         width: 80px;
         height: 80px;
         border-radius: 50%;
+        box-shadow: 0px 0px 5px black;
     }
     .user-info {
-        margin-top: 50px;
         display: flex;
         align-items: center;
         width: 100%;
         padding: 16px 32px;
         gap: 16px;
+        box-shadow: 0px 5px 10px rgba(70, 130, 180, .5);
     }
 `;
-function Header() {
+const StyledBanner = styled.div`
+    background-image: url(${config.bg});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+
+`
+
+function Header(props) {
 
     return (
         <StyledHeader>
-            {/* <img src="" /> */}
+            <StyledBanner />
             <section className="user-info">
-                <img src={`https://github.com/${config.github}.png`} />
+                <img className="avatar" src={`https://github.com/${config.github}.png`} />
                 <div>
                     <h2>
                         {config.name}
@@ -59,7 +72,7 @@ function Header() {
     )
 }
 
-function TimeLine(props) {
+function TimeLine({ searchValue, ...props }) {
     const playlistsNames = Object.keys(props.playlists);
 
     return (
@@ -67,19 +80,26 @@ function TimeLine(props) {
             {playlistsNames.map((playlistName) => {
                 const videos = props.playlists[playlistName];
                 return (
-                    <section>
+                    <section key={playlistName}>
                         <h2>{playlistName}</h2>
                         <div>
-                            {videos.map((video) => {
-                                return (
-                                    <a href={video.url}>
-                                        <img src={video.thumb} />
-                                        <span>
-                                            {video.title}
-                                        </span>
-                                    </a>
-                                )
-                            })}
+                            {videos
+                                .filter((video) => {
+                                    const titleNormalized = video.title.toLowerCase();
+                                    const searchValueNormalized = searchValue.toLowerCase();
+
+                                    return titleNormalized.includes(searchValueNormalized)
+                                })
+                                .map((video) => {
+                                    return (
+                                        <a key={video.url} href={video.url}>
+                                            <img src={video.thumb} />
+                                            <span>
+                                                {video.title}
+                                            </span>
+                                        </a>
+                                    )
+                                })}
                         </div>
                     </section>
                 )
