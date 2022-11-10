@@ -27,7 +27,9 @@
     },
     "favorites": [
         {
-            "channel": "Kennzy"
+            "name": "Kennzy",
+            "channelUrl": "https://www.youtube.com/c/Kennzy",
+            "channelAvatar": "https://yt3.ggpht.com/ytc/AMLnZu8IbW7ADlWscN9oaL7nkfUwvQpOePY5BfrS55ftfQ=s88-c-k-c0x00ffffff-no-rj"
         }
     ]
 }

@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { useState } from 'react'
 
 import config from '../config.json'
-import { CSSReset } from '../src/components/CSSReset';
 import Menu from '../src/components/Menu';
+import { CSSReset } from '../src/components/CSSReset';
 import { StyledTimeline } from '../src/components/TimeLine';
+import { StyledFavorites } from '../src/components/Favorites';
 
 function HomePage() {
     const [filterValue, setFilterValue] = useState('');
@@ -20,6 +21,7 @@ function HomePage() {
                 <Menu filterValue={filterValue} setFilterValue={setFilterValue} />
                 <Header imageSrc={config.mainBanner} />
                 <TimeLine searchValue={filterValue} playlists={config.playlists} />
+                <Favorites favorites={config.favorites} />
             </div>
         </>
     );
@@ -108,3 +110,29 @@ function TimeLine({ searchValue, ...props }) {
     )
 }
 
+function Favorites(props) {
+
+    const favorites = props.favorites
+    console.log(favorites);
+
+    return (
+        <StyledFavorites>
+            {favorites
+                .map((favorites) => {
+                    return (
+                        <section key={favorites}>
+                            <h2>Favoritos</h2>
+                            <div>
+                                <a key={favorites.url} href={favorites.url}>
+                                    <img className="favorite-avatar" src={favorites.avatar} />
+                                    <span>
+                                        {favorites.name}
+                                    </span>
+                                </a>
+                            </div>
+                        </section>
+                    )
+                })}
+        </StyledFavorites>
+    )
+}
