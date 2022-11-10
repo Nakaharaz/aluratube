@@ -5,11 +5,11 @@
     "bg": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1120&q=80",
     "github": "nakaharaz",
     "playlists": {
-        "jogos": [
+        "Comédia": [
             {
-                "title": "Video 01",
-                "url": "url1",
-                "thumb": "thumbnail do video"
+                "title": "Léo lins - Perturbador (Show completo)",
+                "url": "https://www.youtube.com/watch?v=ZRMoBdC5cFA",
+                "thumb": "https://i.ytimg.com/vi/ZRMoBdC5cFA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB7X8my1EOKoE78-hSPPELTJ_rsnA"
             },
             {
                 "title": "Video 02",
@@ -30,6 +30,21 @@
             "name": "Kennzy",
             "channelUrl": "https://www.youtube.com/c/Kennzy",
             "channelAvatar": "https://yt3.ggpht.com/ytc/AMLnZu8IbW7ADlWscN9oaL7nkfUwvQpOePY5BfrS55ftfQ=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "name": "Ciência todo dia",
+            "channelUrl": "https://www.youtube.com/c/CienciaTodoDia",
+            "channelAvatar": "https://yt3.ggpht.com/ytc/AMLnZu_I9SKhqEqL2YuI7M5-D4oVBtRfQB0lXVQ1FGsAAA=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "name": "Flow Podcast",
+            "channelUrl": "https://www.youtube.com/c/FlowPodcast",
+            "channelAvatar": "https://yt3.ggpht.com/ytc/AMLnZu9VTkgTp2RbpDE_3taaNpj454_yvg_CZPtyVb-3Ew=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "name": "Léo Lins",
+            "channelUrl": "https://www.youtube.com/c/leolinsstandup",
+            "channelAvatar": "https://yt3.ggpht.com/ytc/AMLnZu_bKFXvcY8giN6flWCSfpHwaUKwnPgys6mvUqgMYg=s88-c-k-c0x00ffffff-no-rj"
         }
     ]
 }
