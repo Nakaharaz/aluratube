@@ -12,7 +12,6 @@ function HomePage() {
 
   return (
     <>
-      <CSSReset />
       <div
         style={{
           display: "flex",
@@ -32,6 +31,8 @@ function HomePage() {
 export default HomePage;
 
 const StyledHeader = styled.div`
+  background-color: ${({ theme }) => theme.backgrounLevel1};
+
   .avatar {
     width: 80px;
     height: 80px;
@@ -44,7 +45,7 @@ const StyledHeader = styled.div`
     width: 100%;
     padding: 16px 32px;
     gap: 16px;
-    box-shadow: 0px 5px 10px rgba(70, 130, 180, 0.5);
+    box-shadow: 0px 5px 10px black;
   }
 `;
 const StyledBanner = styled.div`
@@ -109,7 +110,6 @@ function TimeLine({ searchValue, ...props }) {
 
 function Favorites(props) {
   const favorites = props.favorites;
-  console.log(favorites);
 
   return (
     <StyledFavorites>

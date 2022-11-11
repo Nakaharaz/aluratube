@@ -7,21 +7,26 @@
     "playlists": {
         "Comédia": [
             {
-                "title": "Léo lins - Perturbador (Show completo)",
+                "title": "Léo Lins - Perturbador (Show completo)",
                 "url": "https://www.youtube.com/watch?v=ZRMoBdC5cFA",
                 "thumb": "https://i.ytimg.com/vi/ZRMoBdC5cFA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB7X8my1EOKoE78-hSPPELTJ_rsnA"
             },
             {
-                "title": "Video 02",
-                "url": "url2",
-                "thumb": "thumbnail do video"
+                "title": "Léo Lins - Bullying Arte (show completo)",
+                "url": "https://youtu.be/ffWmZhuM46w",
+                "thumb": "https://i.ytimg.com/vi/ffWmZhuM46w/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdAlanjG0u4mf9TB1a59pHmfkMuQ"
+            },
+            {
+                "title": "Léo Lins - Piadas Secretas (show completo)",
+                "url": "https://youtu.be/8GruIvGj_Fw",
+                "thumb": "https://i.ytimg.com/vi/8GruIvGj_Fw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCas_4OYRTH-qMps4ZnMHccdlrhrg"
             }
         ],
-        "front-end": [
+        "Jogos": [
             {
-                "title": "Video 03",
-                "url": "url3",
-                "thumb": "thumbnail do video"
+                "title": "GRAVES LETALIDADE NA JUNGLE É 1 HIT KILL",
+                "url": "https://youtu.be/17jm1OOMvYI",
+                "thumb": "https://i.ytimg.com/vi/17jm1OOMvYI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzfHppchgf0R7QVpsEympJYngQZg"
             }
         ]
     },

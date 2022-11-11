@@ -25,7 +25,7 @@ export const StyledFavorites = styled.div`
       flex-direction: column;
       align-items: center;
       scroll-snap-align: start;
-      margin: 0px 10px;
+      margin: 0px 20px 10px 5px;
       span {
         padding-top: 8px;
         display: block;

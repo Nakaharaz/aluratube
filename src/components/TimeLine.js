@@ -17,6 +17,7 @@ export const StyledTimeline = styled.div`
     width: 100%;
     max-width: 210px;
     height: auto;
+    border-radius: 10px;
   }
   section {
     width: 100%;
@@ -36,7 +37,7 @@ export const StyledTimeline = styled.div`
       a {
         scroll-snap-align: start;
         span {
-          padding-top: 8px;
+          padding: 8px 0px 8px 0px;
           display: block;
           padding-right: 24px;
           color: ${({ theme }) => theme.textColorBase || "#222222"};
