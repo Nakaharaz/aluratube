@@ -1,14 +1,33 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import config from "../config.json";
 import Menu from "../src/components/Menu";
 import { CSSReset } from "../src/components/CSSReset";
 import { StyledTimeline } from "../src/components/TimeLine";
 import { StyledFavorites } from "../src/components/Favorites";
+import { videoService } from "../src/services/videoService";
 
 function HomePage() {
+  const service = videoService();
   const [filterValue, setFilterValue] = useState("");
+  const [playlists, setPlaylists] = useState({});
+
+  useEffect(() => {
+    service
+      .getAllVideos()
+      .then((response) => {
+        const novasPlaylists = { ...playlists };
+
+        response.data.forEach((video) => {
+          if (!novasPlaylists[video.playlist]) {
+            novasPlaylists[video.playlist] = [];
+          }
+          novasPlaylists[video.playlist].push(video);
+        });
+        setPlaylists(novasPlaylists);
+      });
+  }, []);
 
   return (
     <>
@@ -21,7 +40,7 @@ function HomePage() {
       >
         <Menu filterValue={filterValue} setFilterValue={setFilterValue} />
         <Header imageSrc={config.mainBanner} />
-        <TimeLine searchValue={filterValue} playlists={config.playlists} />
+        <TimeLine searchValue={filterValue} playlists={playlists} />
         <Favorites favorites={config.favorites} />
       </div>
     </>
@@ -94,7 +113,7 @@ function TimeLine({ searchValue, ...props }) {
                 })
                 .map((video) => {
                   return (
-                    <a key={video.url} href={video.url}>
+                    <a key={video.url} href={video.url} target={"_blank"}>
                       <img src={video.thumb} />
                       <span>{video.title}</span>
                     </a>
@@ -117,7 +136,11 @@ function Favorites(props) {
       <section>
         {favorites.map((favorites) => {
           return (
-            <a key={favorites.channelUrl} href={favorites.channelUrl}>
+            <a
+              key={favorites.channelUrl}
+              href={favorites.channelUrl}
+              target={"_blank"}
+            >
               <img className="favorite-avatar" src={favorites.channelAvatar} />
               <span>{favorites.name}</span>
             </a>
